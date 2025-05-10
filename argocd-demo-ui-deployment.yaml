@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: argocd-demo-ui
+  name: argocd-test-ui
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: argocd-demo-ui
+      app: argocd-test-ui
   template:
     metadata:
       labels:
-        app: argocd-demo-ui
+        app: argocd-test-ui
     spec:
       containers:
       - image: registry.k8s.io/e2e-test-images/agnhost:2.39
